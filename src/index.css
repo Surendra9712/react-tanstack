@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "quill/dist/quill.snow.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    :root {
+        /*colors*/
+        --body-font-family:"Outfit", sans-serif;
+        /*primary*/
+        --primary-50: rgb(213, 227, 255);
+        --primary-100: rgb(170, 199, 255);
+        --primary-200: rgb(128, 171, 255);
+        --primary-300: rgb(85, 143, 255);
+        --primary-400: rgb(42, 115, 255);
+        --primary-500: rgb(0, 87, 255);
+        --primary-600: rgb(0, 73, 213);
+        --primary-700: rgb(0, 58, 170);
+        --primary-800: rgb(0, 44, 128);
+        --primary-900: rgb(0, 29, 85);
+        --primary-950: rgb(0, 15, 43);
+        --primary-translucent: rgba(0, 87, 255,0.16);
+
+        /*danger*/
+        --danger-50: rgb(249, 218, 220);
+        --danger-100: rgb(243, 181, 184);
+        --danger-200: rgb(237, 145, 149);
+        --danger-300: rgb(231, 108, 113);
+        --danger-400: rgb(225, 71, 77);
+        --danger-500: rgb(219, 34, 42);
+        --danger-600: rgb(183, 28, 35);
+        --danger-700: rgb(146, 23, 28);
+        --danger-800: rgb(110, 17, 21);
+        --danger-900: rgb(73, 11, 14);
+        --danger-950: rgb(37, 6, 7);
+        --danger-translucent: rgba(219, 34, 42, 0.16);
+
+        /*success*/
+        --success-50: rgb(225, 243, 224);
+        --success-100: rgb(195, 232, 193);
+        --success-200: rgb(166, 220, 162);
+        --success-300: rgb(136, 208, 130);
+        --success-400: rgb(106, 197, 99);
+        --success-500: rgb(76, 185, 68);
+        --success-600: rgb(63, 154, 57);
+        --success-700: rgb(51, 123, 45);
+        --success-800: rgb(38, 93, 34);
+        --success-900: rgb(25, 62, 23);
+        --success-950: rgb(13, 31, 11);
+        --success-translucent: rgba(76, 185, 68,0.16);
+
+        /*warning*/
+        --warning-50: rgb(253, 236, 214);
+        --warning-100: rgb(252, 216, 172);
+        --warning-200: rgb(250, 197, 131);
+        --warning-300: rgb(248, 177, 90);
+        --warning-400: rgb(247, 158, 48);
+        --warning-500: rgb(245, 138, 7);
+        --warning-600: rgb(204, 115, 6);
+        --warning-700: rgb(163, 92, 5);
+        --warning-800: rgb(123, 69, 4);
+        --warning-900: rgb(82, 46, 2);
+        --warning-950: rgb(41, 23, 1);
+        --warning-translucent: rgba(245, 138, 7,0.16);
+
+        /*info*/
+        --info-50: rgb(213, 236, 246);
+        --info-100: rgb(171, 217, 238);
+        --info-200: rgb(130, 198, 229);
+        --info-300: rgb(88, 179, 220);
+        --info-400: rgb(46, 160, 212);
+        --info-500: rgb(4, 141, 203);
+        --info-600: rgb(3, 118, 169);
+        --info-700: rgb(3, 94, 135);
+        --info-800: rgb(2, 71, 102);
+        --info-900: rgb(1, 47, 68);
+        --info-950: rgb(1, 24, 34);
+        --info-translucent: rgba(4, 141, 203,0.16);
+
+        /*accent*/
+        --accent-50: rgb(239, 219, 255);
+        --accent-100: rgb(224, 182, 255);
+        --accent-200: rgb(208, 146, 255);
+        --accent-300: rgb(192, 110, 255);
+        --accent-400: rgb(177, 73, 255);
+        --accent-500: rgb(161, 37, 255);
+        --accent-600: rgb(134, 31, 213);
+        --accent-700: rgb(107, 25, 170);
+        --accent-800: rgb(81, 19, 128);
+        --accent-900: rgb(54, 12, 85);
+        --accent-950: rgb(27, 6, 43);
+        --accent-translucent: rgba(161, 37, 255, 0.16);
+
+        /*gray*/
+        --gray-50: rgb(243, 244, 247);
+        --gray-100: rgb(230, 232, 239);
+        --gray-200: rgb(218, 221, 232);
+        --gray-300: rgb(206, 209, 224);
+        --gray-400: rgb(193, 198, 216);
+        --gray-500: rgb(181, 186, 208);
+        --gray-600: rgb(151, 155, 173);
+        --gray-700: rgb(121, 124, 139);
+        --gray-800: rgb(91, 93, 104);
+        --gray-900: rgb(60, 62, 69);
+        --gray-950: rgb(30, 31, 35);
+        --gray-translucent: rgba(181, 186, 208,0.16);
+
+        /*white*/
+        --white: rgb(255, 255, 255);
+        --white-translucent: rgba(255, 255, 255,0.16);
+        --black: rgb(0, 0, 0);
+        --overlay: rgba(0, 0, 0,0.32);
+
+        /*size*/
+        /* heading*/
+        --heading-1-font-size: 2.5rem;
+        --heading-1-line-height: 3.5rem;
+        --heading-2-font-size: 2rem;
+        --heading-2-line-height: 2.75rem;
+        --heading-3-font-size: 1.75rem;
+        --heading-3-line-height: 2.5rem;
+        --heading-4-font-size: 1.5rem;
+        --heading-4-line-height: 2rem;
+        --heading-5-font-size: 1.25rem;
+        --heading-5-line-height: 1.75rem;
+        --heading-6-font-size: 1rem;
+        --heading-6-line-height: 1.5rem;
+
+        /*display*/
+        --display-lg: 3.5rem;
+        --display-lg-line-height: 5rem;
+        --display-md: 2.75rem;
+        --display-md-line-height: 4rem;
+        --display-sm: 2.25rem;
+        --display-sm-line-height: 3.25rem;
+
+        /*title*/
+        --title-lg: 1.25rem;
+        --title-lg-line-height: 1.75rem;
+        --title-md: 1rem;
+        --title-md-line-height: 1.5rem;
+        --title-sm: 0.875rem;
+        --title-sm-line-height: 1.25rem;
+
+        /*body*/
+        --body-lg: 1rem;
+        --body-lg-line-height: 1.5rem;
+        --body-md: 0.875rem;
+        --body-md-line-height: 1.25rem;
+        --body-sm: 0.75rem;
+        --body-sm-line-height: 1rem;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+
+        --chart-1: var(--accent-400);
+        --chart-2: var(--info-400);
+        --chart-3: var(--success-400);
+        --chart-4: var(--primary-400);
+        --chart-5: var(--danger-400);
+        --chart-6: var(--gray-400);
+        --chart-7: var(--warning-400);
+        --chart-8: rgba(31, 209, 192, 1);
+        --chart-9: rgba(248, 199, 83, 1);
+        --chart-10: rgba(85, 0, 143, 1);
+        --chart-11: rgba(139, 88, 41, 1);
+        --chart-12: rgba(234, 100, 138, 1);
+        --chart-13: var(--gray-600);
+        --chart-14: var(--gray-800);
+        --chart-15: var(--gray-950);
+        --chart-16: var(--primary-800);
+        --chart-17: var(--success-900);
+        --chart-18: var(--danger-800);
+    }
+
+    .dark {
+    }
+}
+
+@layer base {
+    * {
+
+        @apply border-border;
+        @apply font-normal;
+        ::-webkit-scrollbar {
+            width: 0.675rem;
+            background: var(--gray-50);
+        }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 0.5rem 0.5rem  var(var(--gray-300));
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--gray-300);
+            border-radius: 1rem;
+            border: 0.125rem solid var(--gray-300);
+        }
+    }
+
+    body {
+        @apply font-sans;
+    }
+    .focus-not-error:focus:not([data-error="true"]) {
+        @apply border-primary-200;
+    }
+
+    .tiny-scrollbar {
+        &::-webkit-scrollbar {
+            width: 0.325rem;
+            height: 0.325rem;
+            opacity: 0;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border: unset;
+        }
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    [class*="text-title-"],[class*="text-display-"],[class*="text-heading-"] {
+        @apply font-heading;
+    }
+}
+.ql-toolbar.ql-snow{
+    border-radius: 0.25rem;
+    border-width: 0 !important;
+    background: var(--gray-50);
+}
+.number-input[type=number]::-webkit-inner-spin-button,
+.number-input[type=number]::-webkit-outer-spin-button,
+.number-input[type=number]{
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0;
+}

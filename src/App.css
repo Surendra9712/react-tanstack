@@ -1,0 +1,18 @@
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+html, body {
+    margin: 0;
+    height: 100%;
+  }
+.sidebar-transition {
+    transition: width 0.3s ease, visibility 0.3s ease;
+}
+
+.ql-container {
+    min-height: 150px;
+    max-height: 300px;
+    overflow: auto;
+}

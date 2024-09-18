@@ -1,0 +1,48 @@
+import Sale from "@/types/Sale";
+
+export interface ISalesDialog {
+  isDialogOpen: boolean;
+  clearDialog: () => void;
+  clearViewDialog: () => void;
+  handleDialogSubmit: () => void;
+  tempSale: Sale | null;
+  stockNumberRef: React.RefObject<HTMLInputElement>;
+  typeRef: React.RefObject<HTMLInputElement>;
+  modelRef: React.RefObject<HTMLInputElement>;
+  makeRef: React.RefObject<HTMLInputElement>;
+  yearRef: React.RefObject<HTMLInputElement>;
+  costRef: React.RefObject<HTMLInputElement>;
+  saleAmountRef: React.RefObject<HTMLInputElement>;
+  colorRef: React.RefObject<HTMLInputElement>;
+  dateRef: React.RefObject<HTMLInputElement>;
+  vinRef: React.RefObject<HTMLInputElement>;
+  leaseAmountRef: React.RefObject<HTMLInputElement>;
+  tradeAmountRef: React.RefObject<HTMLInputElement>;
+  customerNameRef: React.RefObject<HTMLInputElement>;
+  stockNumberError: string;
+  setStockNumberError: (value: React.SetStateAction<string>) => void;
+  typeError: string;
+  setTypeError: (value: React.SetStateAction<string>) => void;
+  modelError: string;
+  setModelError: (value: React.SetStateAction<string>) => void;
+  makeError: string;
+  setMakeError: (value: React.SetStateAction<string>) => void;
+  yearError: string;
+  setYearError: (value: React.SetStateAction<string>) => void;
+  costError: string;
+  setCostError: (value: React.SetStateAction<string>) => void;
+  saleAmountError: string;
+  setSaleAmountError: (value: React.SetStateAction<string>) => void;
+  colorError: string;
+  setColorError: (value: React.SetStateAction<string>) => void;
+  dateError: string;
+  setDateError: (value: React.SetStateAction<string>) => void;
+  vinError: string;
+  setVinError: (value: React.SetStateAction<string>) => void;
+  leaseAmountError: string;
+  setLeaseAmountError: (value: React.SetStateAction<string>) => void;
+  tradeAmountError: string;
+  setTradeAmountError: (value: React.SetStateAction<string>) => void;
+  customerNameError: string;
+  setCustomerNameError: (value: React.SetStateAction<string>) => void;
+}
